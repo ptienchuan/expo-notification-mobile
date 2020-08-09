@@ -9,17 +9,20 @@
 
 - [ ] Build a simple UI
 
-  |                    | Task | iOS | Android |
-  | ------------------ | ---- | :-: | :-----: |
-  | :heavy_check_mark: |      |     |         |
-  | :heavy_check_mark: |      |     |         |
+  |       Status       | Task                          |        iOS         |      Android       |
+  | :----------------: | ----------------------------- | :----------------: | :----------------: |
+  | :white_check_mark: | Create main screen            | :white_check_mark: | :white_check_mark: |
+  |                    | Create menu site draw         |                    |                    |
+  |                    | Add badge                     |                    |                    |
+  |                    | Create notification component |                    |                    |
+  |                    | Create notifications screen   |                    |                    |
 
 <br>
 
 - [ ] Implement receive notification
 
-  |                    | Task | iOS | Android |
-  | ------------------ | ---- | :-: | :-----: |
+  |       Status       | Task | iOS | Android |
+  | :----------------: | ---- | :-: | :-----: |
   | :heavy_check_mark: |      |     |         |
   | :heavy_check_mark: |      |     |         |
 
@@ -27,7 +30,7 @@
 
 - [ ] Implement send notification
 
-  |                    | Task | iOS | Android |
-  | ------------------ | ---- | :-: | :-----: |
+  |       Status       | Task | iOS | Android |
+  | :----------------: | ---- | :-: | :-----: |
   | :heavy_check_mark: |      |     |         |
   | :heavy_check_mark: |      |     |         |
