@@ -9,29 +9,31 @@
 
 - [ ] **1. Build a simple UI**
 
-  |     |       Status       | Task                          |        iOS         |      Android       |
-  | :-: | :----------------: | ----------------------------- | :----------------: | :----------------: |
-  |  1  | :white_check_mark: | Create main screen            | :white_check_mark: | :white_check_mark: |
-  |  2  |                    | Create menu site draw         |                    |                    |
-  |  3  |                    | Add badge                     |                    |                    |
-  |  4  |                    | Create notification component |                    |                    |
-  |  5  |                    | Create notifications screen   |                    |                    |
+  |     |       Status       | Task                             |    iOS checked     |  Android checked   |
+  | :-: | :----------------: | -------------------------------- | :----------------: | :----------------: |
+  |  1  | :heavy_check_mark: | Create home screen               | :heavy_check_mark: | :heavy_check_mark: |
+  |  2  | :heavy_check_mark: | Create empty notification screen | :heavy_check_mark: | :heavy_check_mark: |
+  |  3  | :heavy_check_mark: | Add react native navigator       | :heavy_check_mark: | :heavy_check_mark: |
+  |  4  | :white_check_mark: | Create menu site draw            |                    |                    |
+  |  5  |                    | Add badge                        |                    |                    |
+  |  6  |                    | Create notification component    |                    |                    |
+  |  7  |                    | Complete notification screen     |                    |                    |
 
 <br>
 
 - [ ] **2. Implement receive notification**
 
-  |     | Status | Task                                                  | iOS | Android |
-  | :-: | :----: | ----------------------------------------------------- | :-: | :-----: |
-  |  1  |        | Be able to push notification when do not open the app |     |         |
-  |  2  |        | Be able to push notification when opening the app     |     |         |
-  |  3  |        | Update notification badge automatically               |     |         |
+  |     | Status | Task                                                  | iOS checked | Android checked |
+  | :-: | :----: | ----------------------------------------------------- | :---------: | :-------------: |
+  |  1  |        | Be able to push notification when do not open the app |             |                 |
+  |  2  |        | Be able to push notification when opening the app     |             |                 |
+  |  3  |        | Update notification badge automatically               |             |                 |
 
 <br>
 
 - [ ] **3. Implement send notification**
 
-  |     |       Status       | Task | iOS | Android |
-  | :-: | :----------------: | ---- | :-: | :-----: |
-  |  1  | :heavy_check_mark: |      |     |         |
-  |  2  | :heavy_check_mark: |      |     |         |
+  |     |       Status       | Task | iOS checked | Android checked |
+  | :-: | :----------------: | ---- | :---------: | :-------------: |
+  |  1  | :heavy_check_mark: |      |             |                 |
+  |  2  | :heavy_check_mark: |      |             |                 |
