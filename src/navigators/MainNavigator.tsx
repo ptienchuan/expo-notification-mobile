@@ -4,7 +4,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/Home/Home';
 import NotificationScreen from '../screens/Notification/Notification';
 
-const Stack = createStackNavigator();
+type RootStackParamList = {
+  Home: undefined;
+  Notifications: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const MainNavigator = () => {
   return (
@@ -17,4 +22,5 @@ const MainNavigator = () => {
   );
 };
 
+export { RootStackParamList };
 export default MainNavigator;
