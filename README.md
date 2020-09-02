@@ -14,8 +14,8 @@
   |  1  | :heavy_check_mark: | Create home screen               | :heavy_check_mark: | :heavy_check_mark: |
   |  2  | :heavy_check_mark: | Create empty notification screen | :heavy_check_mark: | :heavy_check_mark: |
   |  3  | :heavy_check_mark: | Add react native navigator       | :heavy_check_mark: | :heavy_check_mark: |
-  |  4  | :white_check_mark: | Create footer with badge         |                    |                    |
-  |  6  |                    | Create notification component    |                    |                    |
+  |  4  | :heavy_check_mark: | Create footer with badge         | :heavy_check_mark: | :heavy_check_mark: |
+  |  6  | :white_check_mark: | Create notification component    |                    |                    |
   |  7  |                    | Complete notification screen     |                    |                    |
 
 <br>
