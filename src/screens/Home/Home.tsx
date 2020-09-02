@@ -1,11 +1,13 @@
-import React from 'react';
-import { Text, Button, View } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../navigators/MainNavigator';
-import CommonFooter from '../../components/CommonFooter/CommonFooter';
-import styles from './style';
+import React from "react";
+import { Text, Button, View } from "react-native";
+import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
+import { RootStackParamList } from "../../navigators/MainNavigator";
+import styles from "./style";
 
-type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+type HomeScreenNavigationProp = BottomTabNavigationProp<
+  RootStackParamList,
+  "Home"
+>;
 
 type HomeProps = {
   navigation: HomeScreenNavigationProp;
@@ -13,16 +15,16 @@ type HomeProps = {
 
 const HomeScreen = ({ navigation }: HomeProps) => {
   return (
-    <CommonFooter navigation={navigation} from="Home">
+    <View style={styles.container}>
       <Text style={{ ...styles.text, ...styles.title }}>HOME SCREEN</Text>
       <Text style={styles.text}>Demo React Native Expo Notification</Text>
       <Button
         title="Notification"
         onPress={() => {
-          navigation.replace('Notifications');
+          navigation.navigate("Notifications");
         }}
       />
-    </CommonFooter>
+    </View>
   );
 };
 

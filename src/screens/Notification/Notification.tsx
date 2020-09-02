@@ -1,13 +1,12 @@
-import React from 'react';
-import { Text, View, Button } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../navigators/MainNavigator';
-import CommonFooter from '../../components/CommonFooter/CommonFooter';
-import styles from './style';
+import React from "react";
+import { Text, View, Button } from "react-native";
+import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
+import { RootStackParamList } from "../../navigators/MainNavigator";
+import styles from "./style";
 
-type NotificationScreenNavigationProp = StackNavigationProp<
+type NotificationScreenNavigationProp = BottomTabNavigationProp<
   RootStackParamList,
-  'Notifications'
+  "Notifications"
 >;
 type NotificationProps = {
   navigation: NotificationScreenNavigationProp;
@@ -15,7 +14,7 @@ type NotificationProps = {
 
 const NotificationScreen = ({ navigation }: NotificationProps) => {
   return (
-    <CommonFooter navigation={navigation} from="Notification">
+    <View style={styles.container}>
       <Text style={{ ...styles.text, ...styles.title }}>
         NOTIFICATION SCREEN
       </Text>
@@ -23,10 +22,10 @@ const NotificationScreen = ({ navigation }: NotificationProps) => {
       <Button
         title="Home"
         onPress={() => {
-          navigation.replace('Home');
+          navigation.navigate("Home");
         }}
       />
-    </CommonFooter>
+    </View>
   );
 };
 
