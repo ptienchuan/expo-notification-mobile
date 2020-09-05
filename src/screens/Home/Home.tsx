@@ -2,7 +2,7 @@ import React from "react";
 import { Text, Button, View } from "react-native";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import { RootStackParamList } from "../../navigators/MainNavigator";
-import styles from "./style";
+import styles from "./styles";
 
 type HomeScreenNavigationProp = BottomTabNavigationProp<
   RootStackParamList,
