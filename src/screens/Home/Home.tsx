@@ -1,7 +1,8 @@
 import React from "react";
-import { Text, Button, View } from "react-native";
+import { Text, Button } from "react-native";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import { RootStackParamList } from "../../navigators/MainNavigator";
+import Body from "../../components/Body/Body";
 import styles from "./styles";
 
 type HomeScreenNavigationProp = BottomTabNavigationProp<
@@ -15,7 +16,7 @@ type HomeProps = {
 
 const HomeScreen = ({ navigation }: HomeProps) => {
   return (
-    <View style={styles.container}>
+    <Body style={styles.container}>
       <Text style={{ ...styles.text, ...styles.title }}>HOME SCREEN</Text>
       <Text style={styles.text}>Demo React Native Expo Notification</Text>
       <Button
@@ -24,7 +25,7 @@ const HomeScreen = ({ navigation }: HomeProps) => {
           navigation.navigate("Notifications");
         }}
       />
-    </View>
+    </Body>
   );
 };
 
