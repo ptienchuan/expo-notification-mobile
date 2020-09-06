@@ -5,7 +5,7 @@ import styles from "./styles";
 
 const HomeScreen = () => {
   return (
-    <Body style={styles.container}>
+    <Body contentContainerStyle={styles.container}>
       <Text style={{ ...styles.text, ...styles.title }}>HOME SCREEN</Text>
       <Text style={styles.text}>Demo React Native Expo Notification</Text>
     </Body>

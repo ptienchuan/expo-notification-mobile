@@ -1,17 +1,27 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, ViewStyle } from "react-native";
 
 type BodyProps = {
-  children?: any;
-  style?: { [key: string]: any };
+  children?: React.ReactNode;
+  style?: ViewStyle;
+  scrollViewStyle?: ViewStyle;
+  contentContainerStyle?: ViewStyle;
 };
 
-const Body = ({ children, style }: BodyProps) => (
-  <View style={{ ...styles.container, ...style }}>{children}</View>
+const Body = (props: BodyProps) => (
+  <View style={{ ...styles.container, ...props.style }}>
+    <ScrollView
+      style={props.scrollViewStyle}
+      contentContainerStyle={props.contentContainerStyle}
+    >
+      {props.children}
+    </ScrollView>
+  </View>
 );
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: "white",
   },
 });

@@ -2,6 +2,7 @@ import React from "react";
 import { RouteProp } from "@react-navigation/native";
 import Body from "../../components/Body/Body";
 import BaseText from "../../components/UI/BaseText/BaseText";
+import Heading from "../../components/UI/Heading/Heading";
 import { NotificationStackParamList } from "../../navigators/NotificationNavigator";
 import styles from "./styles";
 
@@ -18,9 +19,12 @@ const NotificationDetailScreen = ({ route }: NotificationDetailProps) => {
   const { notification } = route.params;
   return (
     <Body style={styles.container}>
-      <BaseText>{notification.title}</BaseText>
-      <BaseText>{notification.sendAt}</BaseText>
-      <BaseText>{notification.description}</BaseText>
+      <Heading>{notification.title}</Heading>
+      <BaseText style={styles.time}>{notification.sendAt}</BaseText>
+      <BaseText style={styles.desc}>{notification.description}</BaseText>
+      {notification.content && (
+        <BaseText style={styles.content}>{notification.content}</BaseText>
+      )}
     </Body>
   );
 };

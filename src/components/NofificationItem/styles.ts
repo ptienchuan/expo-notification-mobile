@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
+import { HORIZONTAL_SPACE } from "../../constants/Style";
 
 const leftSpace = 40;
 
 export default StyleSheet.create({
   container: {
     paddingVertical: 13,
-    marginRight: 15,
+    marginRight: HORIZONTAL_SPACE,
     marginLeft: leftSpace,
     borderBottomWidth: 0.3,
   },

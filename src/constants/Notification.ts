@@ -35,6 +35,8 @@ const NOTIFICATION_DUMMY: NotificationSchema[] = [
     id: 5,
     title: "Thẻ quà 20K - Giải trí thả ga",
     description: "Ratione dolor tenetur ipsam unde illo dolorem libero fuga?",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quibusdam dolore corporis facilis veritatis vero eos perspiciatis quidem nulla eveniet pariatur voluptatem, iure neque cum sint commodi accusamus ea! Autem, unde quod. Vel expedita at quis neque sapiente distinctio adipisci.",
     seen: true,
     sendAt: "11:55 - 28/08/2020",
   },

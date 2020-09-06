@@ -20,6 +20,7 @@ const NotificationNavigator = () => {
       <Stack.Screen
         name="NotificationDetail"
         component={NotificationDetailScreen}
+        options={{ title: "" }}
       />
     </Stack.Navigator>
   );

@@ -7,7 +7,7 @@
 
 ## TODO
 
-- [ ] **1. Build a simple UI**
+- [ ] **1. Design UX/UI**
 
   |     |       Status       | Task                                               |    iOS checked     |  Android checked   |
   | :-: | :----------------: | -------------------------------------------------- | :----------------: | :----------------: |
@@ -17,8 +17,9 @@
   |  4  | :heavy_check_mark: | Create footer with badge                           | :heavy_check_mark: | :heavy_check_mark: |
   |  5  | :heavy_check_mark: | Create notification item component                 | :heavy_check_mark: | :heavy_check_mark: |
   |  6  | :heavy_check_mark: | Add stack navigation to notification & home screen | :heavy_check_mark: | :heavy_check_mark: |
-  |  7  | :white_check_mark: | Create notification detail screen                  | :white_check_mark: | :white_check_mark: |
-  |  8  |                    | Implement redux                                    |                    |                    |
+  |  7  | :heavy_check_mark: | Create notification detail screen                  | :heavy_check_mark: | :heavy_check_mark: |
+  |  8  | :white_check_mark: | Add ESLint to project                              |                    |                    |
+  |  9  |                    | Implement redux                                    |                    |                    |
 
 <br>
 

@@ -2,20 +2,23 @@ import React from "react";
 import { StyleSheet, TextStyle } from "react-native";
 import { Text } from "native-base";
 
-type BaseTextProps = {
+type HeadingProps = {
   children: string;
   style?: TextStyle;
 };
 
-const BaseText = ({ style, children }: BaseTextProps) => (
+const Heading = ({ style, children }: HeadingProps) => (
   <Text style={{ ...styles.container, ...style }}>{children}</Text>
 );
 
 const styles = StyleSheet.create({
   container: {
-    fontSize: 16,
-    textAlign: "justify",
+    fontSize: 22,
+    fontWeight: "bold",
+    paddingTop: 20,
+    paddingBottom: 10,
+    color: "#3A69E5",
   },
 });
 
-export default BaseText;
+export default Heading;
