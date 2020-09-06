@@ -16,8 +16,8 @@
   |  3  | :heavy_check_mark: | Add react native navigator                         | :heavy_check_mark: | :heavy_check_mark: |
   |  4  | :heavy_check_mark: | Create footer with badge                           | :heavy_check_mark: | :heavy_check_mark: |
   |  5  | :heavy_check_mark: | Create notification item component                 | :heavy_check_mark: | :heavy_check_mark: |
-  |  6  | :white_check_mark: | Add stack navigation to notification & home screen | :white_check_mark: | :white_check_mark: |
-  |  7  |                    | Create notification detail screen                  |                    |                    |
+  |  6  | :heavy_check_mark: | Add stack navigation to notification & home screen | :heavy_check_mark: | :heavy_check_mark: |
+  |  7  | :white_check_mark: | Create notification detail screen                  | :white_check_mark: | :white_check_mark: |
   |  8  |                    | Implement redux                                    |                    |                    |
 
 <br>

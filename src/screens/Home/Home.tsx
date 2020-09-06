@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, Button } from "react-native";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { RootStackParamList } from "../../navigators/MainNavigator";
+import { RootTabParamList } from "../../navigators/MainNavigator";
 import Body from "../../components/Body/Body";
 import styles from "./styles";
 
 type HomeScreenNavigationProp = BottomTabNavigationProp<
-  RootStackParamList,
+  RootTabParamList,
   "Home"
 >;
 
@@ -22,7 +22,7 @@ const HomeScreen = ({ navigation }: HomeProps) => {
       <Button
         title="Notification"
         onPress={() => {
-          navigation.navigate("Notifications");
+          navigation.navigate("Notification");
         }}
       />
     </Body>

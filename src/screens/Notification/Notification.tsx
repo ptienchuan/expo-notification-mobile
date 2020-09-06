@@ -1,13 +1,13 @@
 import React from "react";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { RootStackParamList } from "../../navigators/MainNavigator";
+import { RootTabParamList } from "../../navigators/MainNavigator";
 import Body from "../../components/Body/Body";
 import NotificationItem from "../../components/NofificationItem/NotificationItem";
 import styles from "./styles";
 
 type NotificationScreenNavigationProp = BottomTabNavigationProp<
-  RootStackParamList,
-  "Notifications"
+  RootTabParamList,
+  "Notification"
 >;
 type NotificationProps = {
   navigation: NotificationScreenNavigationProp;

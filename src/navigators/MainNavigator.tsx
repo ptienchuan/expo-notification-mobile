@@ -3,15 +3,15 @@ import { Icon } from "native-base";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TabBar from "../components/TabBar/TabBar";
-import HomeScreen from "../screens/Home/Home";
-import NotificationScreen from "../screens/Notification/Notification";
+import HomeNavigator from "./HomeNavigator";
+import NotificationNavigator from "./NotificationNavigator";
 
-type RootStackParamList = {
+type RootTabParamList = {
   Home: undefined;
-  Notifications: undefined;
+  Notification: undefined;
 };
 
-const Tab = createBottomTabNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator<RootTabParamList>();
 
 const MainNavigator = () => {
   return (
@@ -22,14 +22,14 @@ const MainNavigator = () => {
       >
         <Tab.Screen
           name="Home"
-          component={HomeScreen}
+          component={HomeNavigator}
           options={{
             tabBarIcon: ({ focused }) => <Icon name="apps" active={focused} />,
           }}
         />
         <Tab.Screen
-          name="Notifications"
-          component={NotificationScreen}
+          name="Notification"
+          component={NotificationNavigator}
           options={{
             title: "Notifications",
             tabBarIcon: ({ focused }) => (
@@ -43,5 +43,5 @@ const MainNavigator = () => {
   );
 };
 
-export { RootStackParamList };
+export { RootTabParamList };
 export default MainNavigator;
