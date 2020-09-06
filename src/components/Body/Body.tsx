@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 
 type BodyProps = {
-  children: any;
+  children?: any;
   style?: { [key: string]: any };
 };
 

@@ -2,21 +2,15 @@ import React from "react";
 import { View, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import BaseText from "../../components/UI/BaseText/BaseText";
+import { NotificationSchema } from "../../types/Notification";
 import styles from "./styles";
-
-interface NotificationSchema {
-  id: number;
-  title: string;
-  description: string;
-  seen: boolean;
-  sendAt: string;
-}
 
 type NotificationItemProps = {
   notification: NotificationSchema;
+  pressed?(): void;
 };
 
-const NotificationItem = ({ notification }: NotificationItemProps) => {
+const NotificationItem = ({ notification, pressed }: NotificationItemProps) => {
   let dotAtFront = <FontAwesome name="circle" size={10} style={styles.icon} />;
   let descStyle = undefined;
   const titleStyle = { ...styles.title };
@@ -30,7 +24,7 @@ const NotificationItem = ({ notification }: NotificationItemProps) => {
   }
 
   return (
-    <TouchableOpacity onPress={() => console.log("TOUCHED")}>
+    <TouchableOpacity onPress={pressed}>
       {dotAtFront}
       <View style={styles.container}>
         <BaseText style={titleStyle}>{notification.title}</BaseText>
