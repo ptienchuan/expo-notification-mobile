@@ -1,6 +1,6 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "../screens/Home/Home";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from '../screens/Home/Home';
 
 type HomeStackParamList = {
   Home: undefined;
@@ -8,7 +8,7 @@ type HomeStackParamList = {
 
 const Stack = createStackNavigator<HomeStackParamList>();
 
-const HomeNavigator = () => {
+const HomeNavigator = (): JSX.Element => {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />

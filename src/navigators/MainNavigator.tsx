@@ -1,10 +1,10 @@
-import React from "react";
-import { Icon } from "native-base";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import TabBar from "../components/TabBar/TabBar";
-import HomeNavigator from "./HomeNavigator";
-import NotificationNavigator from "./NotificationNavigator";
+import React from 'react';
+import { Icon } from 'native-base';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import TabBar from '../components/TabBar/TabBar';
+import HomeNavigator from './HomeNavigator';
+import NotificationNavigator from './NotificationNavigator';
 
 type RootTabParamList = {
   Home: undefined;
@@ -13,7 +13,7 @@ type RootTabParamList = {
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 
-const MainNavigator = () => {
+const MainNavigator = (): JSX.Element => {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -24,15 +24,17 @@ const MainNavigator = () => {
           name="Home"
           component={HomeNavigator}
           options={{
-            tabBarIcon: ({ focused }) => <Icon name="apps" active={focused} />,
+            tabBarIcon: ({ focused }: { focused: boolean }): JSX.Element => (
+              <Icon name="apps" active={focused} />
+            ),
           }}
         />
         <Tab.Screen
           name="Notification"
           component={NotificationNavigator}
           options={{
-            title: "Notifications",
-            tabBarIcon: ({ focused }) => (
+            title: 'Notifications',
+            tabBarIcon: ({ focused }: { focused: boolean }) => (
               <Icon name="notifications" active={focused} />
             ),
             tabBarBadge: 2,

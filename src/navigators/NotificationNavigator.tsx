@@ -1,8 +1,8 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import NotificationScreen from "../screens/Notification/Notification";
-import NotificationDetailScreen from "../screens/NotificationDetail/NotificationDetail";
-import { NotificationSchema } from "../types/Notification";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import NotificationScreen from '../screens/Notification/Notification';
+import NotificationDetailScreen from '../screens/NotificationDetail/NotificationDetail';
+import { NotificationSchema } from '../types/Notification';
 
 type NotificationStackParamList = {
   Notification: undefined;
@@ -13,14 +13,14 @@ type NotificationStackParamList = {
 
 const Stack = createStackNavigator<NotificationStackParamList>();
 
-const NotificationNavigator = () => {
+const NotificationNavigator = (): JSX.Element => {
   return (
     <Stack.Navigator initialRouteName="Notification">
       <Stack.Screen name="Notification" component={NotificationScreen} />
       <Stack.Screen
         name="NotificationDetail"
         component={NotificationDetailScreen}
-        options={{ title: "" }}
+        options={{ title: '' }}
       />
     </Stack.Navigator>
   );

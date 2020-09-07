@@ -1,21 +1,23 @@
-import React from "react";
-import { RouteProp } from "@react-navigation/native";
-import Body from "../../components/Body/Body";
-import BaseText from "../../components/UI/BaseText/BaseText";
-import Heading from "../../components/UI/Heading/Heading";
-import { NotificationStackParamList } from "../../navigators/NotificationNavigator";
-import styles from "./styles";
+import React from 'react';
+import { RouteProp } from '@react-navigation/native';
+import Body from '../../components/Body/Body';
+import BaseText from '../../components/UI/BaseText/BaseText';
+import Heading from '../../components/UI/Heading/Heading';
+import { NotificationStackParamList } from '../../navigators/NotificationNavigator';
+import styles from './styles';
 
 type NotificationDetailRouteProp = RouteProp<
   NotificationStackParamList,
-  "NotificationDetail"
+  'NotificationDetail'
 >;
 
 type NotificationDetailProps = {
   route: NotificationDetailRouteProp;
 };
 
-const NotificationDetailScreen = ({ route }: NotificationDetailProps) => {
+const NotificationDetailScreen = ({
+  route,
+}: NotificationDetailProps): JSX.Element => {
   const { notification } = route.params;
   return (
     <Body style={styles.container}>

@@ -1,5 +1,5 @@
-import React from "react";
-import { View, ScrollView, StyleSheet, ViewStyle } from "react-native";
+import React from 'react';
+import { View, ScrollView, StyleSheet, ViewStyle } from 'react-native';
 
 type BodyProps = {
   children?: React.ReactNode;
@@ -8,7 +8,7 @@ type BodyProps = {
   contentContainerStyle?: ViewStyle;
 };
 
-const Body = (props: BodyProps) => (
+const Body = (props: BodyProps): JSX.Element => (
   <View style={{ ...styles.container, ...props.style }}>
     <ScrollView
       style={props.scrollViewStyle}
@@ -22,7 +22,7 @@ const Body = (props: BodyProps) => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: 'white',
   },
 });
 

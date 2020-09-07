@@ -7,10 +7,10 @@ import styles from "./styles";
 
 type NotificationItemProps = {
   notification: NotificationSchema;
-  pressed?(): void;
+  pressed?: () => void;
 };
 
-const NotificationItem = ({ notification, pressed }: NotificationItemProps) => {
+const NotificationItem = ({ notification, pressed }: NotificationItemProps):JSX.Element => {
   let dotAtFront = <FontAwesome name="circle" size={10} style={styles.icon} />;
   let descStyle = undefined;
   const titleStyle = { ...styles.title };

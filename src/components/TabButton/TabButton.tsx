@@ -6,10 +6,10 @@ type TabButtonProps = {
   icon: ReactNode;
   active?: boolean;
   badge?: number | string;
-  onPress?(): void;
+  onPress?: () => void;
 };
 
-const TabButton = ({ title, icon, badge, active, onPress }: TabButtonProps) => {
+const TabButton = ({ title, icon, badge, active, onPress }: TabButtonProps): JSX.Element => {
   const badgeComponent =
     badge === undefined ? null : (
       <Badge>
