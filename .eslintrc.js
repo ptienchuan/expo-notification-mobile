@@ -25,4 +25,9 @@ module.exports = {
     "react-native/no-single-element-style-arrays": 2,
     "react/display-name": 0,
   },
+  settings: {
+    react: {
+      version: "detect"
+    }
+  }
 };
