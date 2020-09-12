@@ -5,7 +5,7 @@
 - iOS
 - Android
 
-## TODO
+## TODOs
 
 - [ ] **1. Design UX/UI**
 
@@ -19,7 +19,6 @@
   |  6  | :heavy_check_mark: | Add stack navigation to notification & home screen | :heavy_check_mark: | :heavy_check_mark: |
   |  7  | :heavy_check_mark: | Create notification detail screen                  | :heavy_check_mark: | :heavy_check_mark: |
   |  8  | :heavy_check_mark: | Add ESLint to project                              |        `N/A`         |        `N/A`         |
-  |  9  | :white_check_mark: | Implement redux                                    | :white_check_mark: | :white_check_mark: |
 
 <br>
 
