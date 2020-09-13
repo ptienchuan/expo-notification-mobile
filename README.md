@@ -1,4 +1,7 @@
-# React Native Demo send/receive Notification
+# React Native Demo send/receive Notification - Mobile application
+
+## Back-end:
+- Nodejs back-end: https://github.com/ptienchuan/nodejs-expo-notification-backend
 
 ## Platform
 
@@ -36,5 +39,5 @@
 
   |     |       Status       | Task | iOS checked | Android checked |
   | :-: | :----------------: | ---- | :---------: | :-------------: |
-  |  1  | :heavy_check_mark: |      |             |                 |
-  |  2  | :heavy_check_mark: |      |             |                 |
+  |  1  |  |      |             |                 |
+  |  2  |  |      |             |                 |
