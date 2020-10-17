@@ -3,22 +3,37 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { NotificationStackParamList } from '../../navigators/NotificationNavigator';
 import Body from '../../components/Body/Body';
 import NotificationItem from '../../components/NofificationItem/NotificationItem';
-import { NOTIFICATION_DUMMY } from '../../constants/Notification';
+import { Notification } from '../../types/Notification';
 
 type NotificationScreenNavigationProp = StackNavigationProp<
   NotificationStackParamList,
   'Notification'
 >;
 
-type NotificationProps = {
+type NotificationNavProps = {
   navigation: NotificationScreenNavigationProp;
 };
 
-const NotificationScreen = ({ navigation }: NotificationProps): JSX.Element => {
+type NotificationStoreProps = {
+  notifications: Notification[];
+};
+
+type NotificationDispatchProps = {
+  seenNotification: (id: number) => void;
+};
+
+type NotificationProps = NotificationNavProps & NotificationStoreProps;
+
+const NotificationScreen = ({
+  navigation,
+  notifications,
+  seenNotification,
+}: NotificationProps & NotificationDispatchProps): JSX.Element => {
   return (
     <Body>
-      {NOTIFICATION_DUMMY.map((notification) => {
+      {notifications.map((notification) => {
         const moveToDetail = () => {
+          seenNotification(notification.id);
           navigation.navigate('NotificationDetail', { notification });
         };
         return (
@@ -33,4 +48,10 @@ const NotificationScreen = ({ navigation }: NotificationProps): JSX.Element => {
   );
 };
 
+export {
+  NotificationNavProps,
+  NotificationStoreProps,
+  NotificationProps,
+  NotificationDispatchProps,
+};
 export default NotificationScreen;

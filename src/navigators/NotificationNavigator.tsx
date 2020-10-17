@@ -1,13 +1,13 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import NotificationScreen from '../screens/Notification/Notification';
-import NotificationDetailScreen from '../screens/NotificationDetail/NotificationDetail';
-import { NotificationSchema } from '../types/Notification';
+import NotificationScreen from '../containers/Notification';
+import NotificationDetailScreen from '../containers/NotificationDetail';
+import { Notification } from '../types/Notification';
 
 type NotificationStackParamList = {
   Notification: undefined;
   NotificationDetail: {
-    notification: NotificationSchema;
+    notification: Notification;
   };
 };
 

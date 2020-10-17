@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '../screens/Home/Home';
+import HomeScreen from '../containers/Home';
 
 type HomeStackParamList = {
   Home: undefined;

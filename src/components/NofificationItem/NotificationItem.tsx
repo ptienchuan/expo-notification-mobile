@@ -1,16 +1,19 @@
-import React from "react";
-import { View, TouchableOpacity } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
-import BaseText from "../../components/UI/BaseText/BaseText";
-import { NotificationSchema } from "../../types/Notification";
-import styles from "./styles";
+import React from 'react';
+import { View, TouchableOpacity } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
+import BaseText from '../../components/UI/BaseText/BaseText';
+import { Notification } from '../../types/Notification';
+import styles from './styles';
 
 type NotificationItemProps = {
-  notification: NotificationSchema;
+  notification: Notification;
   pressed?: () => void;
 };
 
-const NotificationItem = ({ notification, pressed }: NotificationItemProps):JSX.Element => {
+const NotificationItem = ({
+  notification,
+  pressed,
+}: NotificationItemProps): JSX.Element => {
   let dotAtFront = <FontAwesome name="circle" size={10} style={styles.icon} />;
   let descStyle = undefined;
   const titleStyle = { ...styles.title };
