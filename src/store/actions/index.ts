@@ -1,45 +1,42 @@
 import { Action } from 'redux';
 import { Notification } from '../../types/Notification';
 
-interface AppAction extends Action<ACTION_TYPE> {
-  payload?: any;
-  error?: boolean;
-  meta?: any;
-}
-
-enum ACTION_TYPE {
+export enum ACTION_TYPE {
   SET_NOTIFICATIONS,
   SEEN_NOTIFICATION,
   SEEN_NOTIFICATIONS,
 }
 
-// TODO: Seprate AppAction to multiple type of actions
+export interface SetNotificationsAction extends Action<ACTION_TYPE> {
+  payload: Notification[];
+}
 
-const setNotifications = (notifications: Notification[]): AppAction => {
+export interface SeenNotificationAction extends Action<ACTION_TYPE> {
+  payload: number;
+}
+
+export type SeenNotificationsAction = Action<ACTION_TYPE>;
+
+export type AppAction = SetNotificationsAction | SeenNotificationAction;
+
+const setNotifications = (
+  notifications: Notification[]
+): SetNotificationsAction => {
   return {
     type: ACTION_TYPE.SET_NOTIFICATIONS,
-    payload: { notifications },
+    payload: notifications,
   };
 };
 
-const seenNotifications = (ids: number[]): AppAction => {
-  return {
-    type: ACTION_TYPE.SEEN_NOTIFICATIONS,
-    payload: { ids },
-  };
+const seenNotifications = (): SeenNotificationsAction => {
+  return { type: ACTION_TYPE.SEEN_NOTIFICATIONS };
 };
 
-const seenNotification = (id: number): AppAction => {
+const seenNotification = (id: number): SeenNotificationAction => {
   return {
     type: ACTION_TYPE.SEEN_NOTIFICATION,
-    payload: { id },
+    payload: id,
   };
 };
 
-export {
-  ACTION_TYPE,
-  AppAction,
-  setNotifications,
-  seenNotifications,
-  seenNotification,
-};
+export { setNotifications, seenNotifications, seenNotification };
