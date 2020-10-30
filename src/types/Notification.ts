@@ -1,4 +1,4 @@
-interface NotificationSchema {
+interface Notification {
   id: number;
   title: string;
   description: string;
@@ -7,4 +7,4 @@ interface NotificationSchema {
   sendAt: string;
 }
 
-export { NotificationSchema };
+export { Notification };

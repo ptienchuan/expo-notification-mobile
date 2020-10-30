@@ -31,4 +31,5 @@ const NotificationDetailScreen = ({
   );
 };
 
+export { NotificationDetailProps };
 export default NotificationDetailScreen;
