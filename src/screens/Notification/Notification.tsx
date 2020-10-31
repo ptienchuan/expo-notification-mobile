@@ -9,26 +9,16 @@ type NotificationScreenNavigationProp = StackNavigationProp<
   NotificationStackParamList,
   'Notification'
 >;
-
-type NotificationNavProps = {
-  navigation: NotificationScreenNavigationProp;
-};
-
-type NotificationStoreProps = {
-  notifications: Notification[];
-};
-
-type NotificationDispatchProps = {
-  seenNotification: (id: number) => void;
-};
-
+type NotificationNavProps = { navigation: NotificationScreenNavigationProp };
+type NotificationStoreProps = { notifications: Notification[] };
+type NotificationDispatchProps = { seenNotification: (id: number) => void };
 type NotificationProps = NotificationNavProps & NotificationStoreProps;
 
 const NotificationScreen = ({
   navigation,
   notifications,
   seenNotification,
-}: NotificationProps & NotificationDispatchProps): JSX.Element => {
+}: NotificationProps & NotificationDispatchProps) => {
   return (
     <Body>
       {notifications.map((notification) => {

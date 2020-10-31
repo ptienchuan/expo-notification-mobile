@@ -2,12 +2,12 @@ import { Action } from 'redux';
 import { Notification } from '../../types/Notification';
 
 export enum ACTION_TYPE {
-  SET_NOTIFICATIONS,
+  FETCH_NOTIFICATIONS,
   SEEN_NOTIFICATION,
   SEEN_NOTIFICATIONS,
 }
 
-export interface SetNotificationsAction extends Action<ACTION_TYPE> {
+export interface FetchNotificationsAction extends Action<ACTION_TYPE> {
   payload: Notification[];
 }
 
@@ -17,14 +17,15 @@ export interface SeenNotificationAction extends Action<ACTION_TYPE> {
 
 export type SeenNotificationsAction = Action<ACTION_TYPE>;
 
-export type AppAction = SetNotificationsAction | SeenNotificationAction;
+export type AppAction =
+  | SeenNotificationAction
+  | FetchNotificationsAction
+  | SeenNotificationAction;
 
-const setNotifications = (
-  notifications: Notification[]
-): SetNotificationsAction => {
+const fetchNotifications = (): FetchNotificationsAction => {
   return {
-    type: ACTION_TYPE.SET_NOTIFICATIONS,
-    payload: notifications,
+    type: ACTION_TYPE.FETCH_NOTIFICATIONS,
+    payload: [],
   };
 };
 
@@ -39,4 +40,4 @@ const seenNotification = (id: number): SeenNotificationAction => {
   };
 };
 
-export { setNotifications, seenNotifications, seenNotification };
+export { fetchNotifications, seenNotifications, seenNotification };
