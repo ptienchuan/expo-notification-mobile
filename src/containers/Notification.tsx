@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 import { connect, MapStateToProps } from 'react-redux';
-import { AppState } from '../store/reducers';
+import { AppState } from '../store';
 import { seenNotification, AppAction } from '../store/actions';
 import Notification, {
   NotificationProps,

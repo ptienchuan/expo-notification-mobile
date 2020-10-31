@@ -3,7 +3,9 @@ import { SafeAreaView, StyleSheet, Platform } from 'react-native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { Provider } from 'react-redux';
-import store from './src/store';
+import { createStore, applyMiddleware } from 'redux';
+import ReduxThunk from 'redux-thunk';
+import appReducer from './src/store';
 import MainNavigator from './src/navigators/MainNavigator';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         });
     }
   });
+
+  const store = createStore(appReducer, applyMiddleware(ReduxThunk));
 
   return isReady ? (
     <Provider store={store}>
