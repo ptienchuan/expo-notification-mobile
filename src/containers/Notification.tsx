@@ -1,31 +1,31 @@
 import { Dispatch } from 'redux';
-import { connect, MapStateToProps } from 'react-redux';
+import { connect } from 'react-redux';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { NotificationStackParamList } from '../navigators/NotificationNavigator';
 import { AppState } from '../store';
-import { seenNotification, AppAction } from '../store/actions';
-import Notification, {
-  NotificationProps,
-  NotificationNavProps,
-  NotificationDispatchProps,
-} from '../screens/Notification/Notification';
+import { seenNotification, AppAction } from '../store/actions/notification';
+import { fetchNotificationsThunk } from '../store/thunks/notification';
+import Notification from '../screens/Notification/Notification';
 
-const mapStateToProps: MapStateToProps<
-  NotificationProps,
-  NotificationNavProps,
-  AppState
-> = (state, { navigation }) => {
+type NavProps = {
+  navigation: StackNavigationProp<NotificationStackParamList, 'Notification'>;
+};
+
+const mapStateToProps = (state: AppState, { navigation }: NavProps) => {
   return {
     navigation,
     notifications: state.notifications,
   };
 };
+export type StoreProps = ReturnType<typeof mapStateToProps>;
 
-const mapDispatchTopProps = (
-  dispatch: Dispatch<AppAction>
-): NotificationDispatchProps => {
+const mapDispatchTopProps = (dispatch: Dispatch<AppAction>) => {
   return {
-    seenNotification: (id) => dispatch(seenNotification(id)),
+    seenNotification: (id: string) => dispatch(seenNotification(id)),
+    fetchNotifications: () => dispatch(fetchNotificationsThunk() as any),
   };
 };
+export type DispatchProps = ReturnType<typeof mapDispatchTopProps>;
 
 const NotificationContainer = connect(
   mapStateToProps,

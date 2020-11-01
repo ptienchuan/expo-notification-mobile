@@ -2,25 +2,24 @@ import {
   AppAction,
   ACTION_TYPE,
   SeenNotificationAction,
-  FetchNotificationsAction,
-} from './actions';
+  SetNotificationsAction,
+} from './actions/notification';
 import { Notification } from '../types/Notification';
-import { NOTIFICATION_DUMMY } from '../constants/Notification';
 
 export interface AppState {
   notifications: Notification[];
 }
 
 const iniState: AppState = {
-  notifications: NOTIFICATION_DUMMY,
+  notifications: [],
 };
 
 const appReducer = (state = iniState, action: AppAction): AppState => {
   switch (action.type) {
-    case ACTION_TYPE.FETCH_NOTIFICATIONS:
+    case ACTION_TYPE.SET_NOTIFICATIONS:
       return {
         ...state,
-        notifications: (action as FetchNotificationsAction).payload,
+        notifications: (action as SetNotificationsAction).payload,
       };
     case ACTION_TYPE.SEEN_NOTIFICATIONS:
       return {

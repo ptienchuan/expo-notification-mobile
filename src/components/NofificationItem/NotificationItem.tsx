@@ -32,7 +32,7 @@ const NotificationItem = ({
       <View style={styles.container}>
         <BaseText style={titleStyle}>{notification.title}</BaseText>
         <BaseText style={descStyle}>{notification.description}</BaseText>
-        <BaseText style={timeStyle}>{notification.sendAt}</BaseText>
+        <BaseText style={timeStyle}>{notification.sendAtString || ''}</BaseText>
       </View>
     </TouchableOpacity>
   );
