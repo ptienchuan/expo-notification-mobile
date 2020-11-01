@@ -22,7 +22,7 @@ const NotificationDetailScreen = ({
   return (
     <Body style={styles.container}>
       <Heading>{notification.title}</Heading>
-      <BaseText style={styles.time}>{notification.sendAt}</BaseText>
+      <BaseText style={styles.time}>{notification.sendAtString || ''}</BaseText>
       <BaseText style={styles.desc}>{notification.description}</BaseText>
       {notification.content && (
         <BaseText style={styles.content}>{notification.content}</BaseText>

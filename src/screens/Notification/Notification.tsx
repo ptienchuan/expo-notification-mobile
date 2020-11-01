@@ -1,24 +1,22 @@
-import React from 'react';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { NotificationStackParamList } from '../../navigators/NotificationNavigator';
+import React, { useEffect } from 'react';
 import Body from '../../components/Body/Body';
 import NotificationItem from '../../components/NofificationItem/NotificationItem';
-import { Notification } from '../../types/Notification';
+import { StoreProps, DispatchProps } from '../../containers/Notification';
 
-type NotificationScreenNavigationProp = StackNavigationProp<
-  NotificationStackParamList,
-  'Notification'
->;
-type NotificationNavProps = { navigation: NotificationScreenNavigationProp };
-type NotificationStoreProps = { notifications: Notification[] };
-type NotificationDispatchProps = { seenNotification: (id: number) => void };
-type NotificationProps = NotificationNavProps & NotificationStoreProps;
+type NotificationProps = StoreProps & DispatchProps;
 
-const NotificationScreen = ({
-  navigation,
-  notifications,
-  seenNotification,
-}: NotificationProps & NotificationDispatchProps) => {
+const NotificationScreen = (props: NotificationProps) => {
+  const {
+    navigation,
+    notifications,
+    seenNotification,
+    fetchNotifications,
+  } = props;
+
+  useEffect(() => {
+    fetchNotifications();
+  }, []);
+
   return (
     <Body>
       {notifications.map((notification) => {
@@ -38,10 +36,4 @@ const NotificationScreen = ({
   );
 };
 
-export {
-  NotificationNavProps,
-  NotificationStoreProps,
-  NotificationProps,
-  NotificationDispatchProps,
-};
 export default NotificationScreen;
