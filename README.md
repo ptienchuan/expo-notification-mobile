@@ -1,1 +1,1 @@
-# React Native Demo send/receive Notification - Mobile application
+# Demo notification - React Native
