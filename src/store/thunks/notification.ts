@@ -4,7 +4,7 @@ import {
   SetNotificationsAction,
   setNotifications,
 } from '../actions/notification';
-import NotificationService, { getUrl } from '../../services/notification';
+import NotificationService from '../../services/notification';
 import { Notification } from '../../types/Notification';
 import { timestampToString } from '../../helpers/date';
 
@@ -19,8 +19,8 @@ const fetchNotificationsThunk = (): ThunkAction<
 > => async (dispatch) => {
   const {
     data,
-  }: { data: NotificationResponse } = await NotificationService.get(
-    getUrl('noId')
+  }: Record<'data', NotificationResponse> = await NotificationService.get(
+    '/notifications.json'
   );
   const ids: string[] = Object.keys(data);
   const notifications: Notification[] = [];
