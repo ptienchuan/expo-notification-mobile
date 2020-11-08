@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import appReducer from './src/store';
 import MainNavigator from './src/navigators/MainNavigator';
+import { storeToken } from './src/helpers/notification';
 
 function App() {
   const [isReady, setIsReady] = useState(false);
@@ -19,6 +20,7 @@ function App() {
       })
         .then(() => {
           setIsReady(true);
+          storeToken();
         })
         .catch((err) => {
           console.log('Loading font occurs error: ', err);
