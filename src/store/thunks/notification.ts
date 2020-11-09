@@ -3,6 +3,8 @@ import { AppState } from '..';
 import {
   SetNotificationsAction,
   setNotifications,
+  SeenNotificationAction,
+  seenNotification,
 } from '../actions/notification';
 import NotificationService from '../../services/notification';
 import { Notification } from '../../types/Notification';
@@ -29,7 +31,19 @@ const fetchNotificationsThunk = (): ThunkAction<
     notification.sendAtString = timestampToString(notification.sendAt);
     notifications.push(notification);
   });
+
   dispatch(setNotifications(notifications));
 };
 
-export { fetchNotificationsThunk };
+const seenNotificationThunk = (
+  id: string
+): ThunkAction<void, AppState, unknown, SeenNotificationAction> => async (
+  dispatch
+) => {
+  const apiUrl = `/notifications/${id}.json`;
+  NotificationService.patch(apiUrl, { seen: true });
+
+  dispatch(seenNotification(id));
+};
+
+export { fetchNotificationsThunk, seenNotificationThunk };
